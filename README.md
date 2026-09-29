@@ -2,7 +2,7 @@
 
 Reproducible tooling for measuring tenant-visible variability and controlled contention in single-GPU LLM inference.
 
-The harness accompanies the DigitalOcean Community article *Does dedicated GPU inference share resources? An isolation-boundary map with measurements*, a study of one NVIDIA H100 80 GB GPU Droplet running vLLM with `Qwen/Qwen3-8B`. It separates four questions. The article refers to each by a descriptive name; the code and analysis files keep the working track letters used during the study.
+The harness accompanies the DigitalOcean Community article *Multi-Tenant GPU Isolation: What "Dedicated" Covers, and What It Doesn't*, a study of one NVIDIA H100 80 GB GPU Droplet running vLLM with `Qwen/Qwen3-8B`. It separates four questions. The article refers to each by a descriptive name; the code and analysis files keep the working track letters used during the study.
 
 | Track | Name in the article | Question |
 | --- | --- | --- |
@@ -149,6 +149,15 @@ This harness can:
 
 Use disposable resources, configure billing alerts, retain cleanup traps, and verify that no GPU process remains after each intervention. Review every command before running it.
 
+## Citation
+
+If you use this data or method, please cite:
+
+```
+Multi-Tenant GPU Isolation: What "Dedicated" Covers, and What It Doesn't (2026).
+https://github.com/mkurup27/multi-tenant-gpu-isolation
+```
+
 ## License
 
-No license has been selected. Add an approved license before making the repository public.
+MIT. See [LICENSE](LICENSE).

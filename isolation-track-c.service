@@ -1,5 +1,5 @@
 [Unit]
-Description=MKTG-3390 GPU isolation longitudinal scheduler
+Description=GPU isolation longitudinal scheduler
 After=network-online.target
 Wants=network-online.target
 

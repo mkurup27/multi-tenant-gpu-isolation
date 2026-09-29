@@ -1,4 +1,4 @@
-# MKTG-3390 reproducibility package
+# Reproducibility package
 
 This manifest separates files suitable for a public article companion from private operational archives. The public set is what this repository contains; it accompanies the DigitalOcean Community article *Does dedicated GPU inference share resources? An isolation-boundary map with measurements*.
 

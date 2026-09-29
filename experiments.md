@@ -58,7 +58,7 @@ host-window, not a request.
 After approval:
 
 ```bash
-cd "/Users/mkurup/Documents/Fresh articles/MKTG-3390"
+cd /path/to/multi-tenant-gpu-isolation
 shasum -a 256 analysis-plan.md | tee preregistration.sha256
 ```
 
@@ -99,7 +99,7 @@ existing H100 price × 336 hours
 ```
 
 Set a billing alert below that ceiling. Tag every new resource
-`experiment:MKTG-3390` and give disposable resources an explicit destruction
+`experiment:gpu-isolation` and give disposable resources an explicit destruction
 date. The intervention host is created only after Track C is healthy.
 
 ## Step 4 — Record documentation guarantees separately
@@ -123,7 +123,7 @@ Do not turn observed low variance into an architectural guarantee.
 From the Mac, using the H100's public address without posting it:
 
 ```bash
-cd "/Users/mkurup/Documents/Fresh articles/MKTG-3390"
+cd /path/to/multi-tenant-gpu-isolation
 ssh sammy@<H100_PUBLIC_IP> 'mkdir -p ~/isolation ~/isolation-results/track-c'
 scp telemetry.sh preflight_gpu_host.sh \
   sammy@<H100_PUBLIC_IP>:~/isolation/
@@ -221,7 +221,7 @@ Copy `engine-config.txt` back into this folder.
 From the Mac:
 
 ```bash
-cd "/Users/mkurup/Documents/Fresh articles/MKTG-3390"
+cd /path/to/multi-tenant-gpu-isolation
 scp isolation_bench.py requirements.txt run_track_c_window.sh \
   schedule_track_c.sh isolation-track-c.service track_c.env.example \
   validate_track_c.py \
@@ -385,7 +385,7 @@ Run for 14 complete UTC days. Do not run any intervention on this H100.
 From the Mac:
 
 ```bash
-cd "/Users/mkurup/Documents/Fresh articles/MKTG-3390"
+cd /path/to/multi-tenant-gpu-isolation
 mkdir -p results/track-c
 rsync -az sammy@<CONTROL_PUBLIC_IP>:/var/lib/isolation/results/track-c/ \
   results/track-c/
@@ -398,7 +398,7 @@ Do not wait until day 14 for the first copy.
 # Phase 4 — Prepare the separate intervention H100
 
 Create one additional 1× H100 in NYC2, in the same team and VPC. Tag it
-`experiment:MKTG-3390` and record its destruction date. Tracks B, E, and G run
+`experiment:gpu-isolation` and record its destruction date. Tracks B, E, and G run
 here only.
 
 ## Step 19 — Permission and capability gate
